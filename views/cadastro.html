@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="{$GET_TEMA}/images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{$GET_TEMA}/css/cadastro.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <center>
+    <div class="container" style="margin-top: 5%">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Olá, Gerente!</h2>
+                <p class="description description-primary">Cadastre aqui os dados de seus alunos e professores</p>
+            </div>
+            <div class="second-column">
+                <img src="{$GET_TEMA}/images/logo.png" class="logo" alt="">
+                <form method="post" enctype="multipart/form-data" action="{$GET_CADASTRO}" class="form">
+                    <label class="label-input" for="">
+                        <input name="nome" type="nome" placeholder=" Nome" required maxlength="30">
+                    </label>
+
+                    <label class="label-input" for="">
+                            <input name="sobrenome" type="sobrenome" placeholder=" Sobrenome" required maxlength="30">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <input name="senha" type="password" placeholder=" Senha" required minlength="8" maxlength="32">
+                    </label>
+
+                    <label class="label-input" for="">
+                            <input name="nascimento" type="date" placeholder=" Data de nascimento" required maxlength="8">
+                        </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input name="email" type="email" placeholder="Email" required>
+                    </label>
+
+                    <div class="div-select">
+                            <select class="label-input"  name="categoria" id="categoria" required>
+                                   <option>Categoria</option>
+                                   <option value="1">Aluno</option>
+                                   <option value="2">Professor</option>
+                            </select>
+                           </div>
+                           <span class="icon-warning"></span>
+
+                    <label class="label" for='selecao-arquivo'></label>
+                    <input name="imagem" id='selecao-arquivo' type='file'>
+
+                    <button class="btn btn-second">Cadastrar</button>
+                    <button href="{$GET_HOME}" class="btn btn-second">Cancelar</button>
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+
+    </div>
+    <script src="{$GET_TEMA}/js/app.js"></script>
+    </center>
+</body>
+</html>

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+.container {
+    display:;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+}
+.content {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 1000px;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: #58af9b;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+    left: 0;
+}
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.title-primary {
+    color: #fff;
+}
+.title-second {
+    color: #58af9b;
+}
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+.description-primary {
+    color: #fff;
+}
+.description-second {
+    color: #7f8c8d;
+}
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem;
+}
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color .5s;
+}
+.btn-primary:hover {
+    background-color: #fff;
+    color: #58af9b;
+}
+.btn-second {
+    background-color: #58af9b;
+    border: 1px solid #58af9b;
+    transition: background-color .5s;
+}
+.btn-second:hover {
+    background-color: #fff;
+    border: 1px solid #58af9b;
+    color: #58af9b;
+}
+.first-content {
+    display: flex;
+}
+.first-content .second-column {
+    z-index: 11;
+}
+.first-column {
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+.second-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+.form input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+}
+input:-webkit-autofill
+{
+    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+.label-input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+.inputFile {
+    width: 315px;
+    height:45px;
+    position: relative;
+    overflow: hidden;
+    background:#ecf0f1;
+    color: #7f8c8d;
+}
+.inputFile span {
+    display: block;
+    position: absolute;
+}
+.inputFile input {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.mover{
+    margin-right: 300px;
+}
+
+
+.div-select {    width:550px;  /* Tamanho final do select */    overflow:hidden; /* Esconde o conteúdo que passar do tamanho especificado */} .div-select select {      background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-select.gif) no-repeat  #ecf0f1 /* Imagem de fundo (Seta) */      background-position: 205px center;  /*Posição da imagem do background*/      width: 315px; /* Tamanho do select, maior que o tamanho da div "div-select" */      height:45px; /* altura do select, importante para que tenha a mesma altura em todo os navegadores */  /*font-family:Arial, Helvetica, sans-serif;/* /* Fonte do Select  font-size:18px; /* Tamanho da Fonte */  padding:9px 16px 9px 8px; /* Configurações de padding para posicionar o texto no campo */  color:#7f8c8d; /* Cor da Fonte */      text-indent: 0.01px; /* Remove seta padrão do FireFox */      text-overflow: "";  /* Remove seta padrão do FireFox */            select::-ms-expand {display: none;} /* Remove seta padrão do IE*/ }
+
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+.logo{
+
+  margin-top: -10%;
+
+}
+
+.upload-wrap {
+    position: relative;
+}
+
+.upload-btn {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+#customFileLang{
+
+  width: 1px;
+
+}
+
+input[type='file'] {
+  display: none
+}
+
+/* Aparência que terá o seletor de arquivo */
+.label {
+  background-color: #3498db;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  padding: 6px 20px
+}

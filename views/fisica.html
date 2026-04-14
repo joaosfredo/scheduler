@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="pt-br">
+
+  <head>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{$GET_TEMA}/images/favicon.ico">
+
+    <title>Scheduler</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="{$GET_TEMA}/https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="{$GET_TEMA}/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="{$GET_TEMA}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/aos.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/calendario.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/questoes.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="vCard template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="{$GET_TEMA}/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/responsive.css">
+
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{$GET_TEMA}/css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <div class="site-wrap" id="home-section">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <header class="site-navbar site-navbar-target" role="banner">
+
+      <div class="container mb-3">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto">
+            <img style="margin-bottom: -25%; margin-top: -20%" src="{$GET_TEMA}/images/logo.png" alt="">
+          </div>
+          <div class="site-quick-contact d-none d-lg-flex ml-auto ">
+            <div class="d-flex site-info align-items-center mr-5">
+              <span class="block-icon mr-3"><span class="icon-map-marker text-yellow"></span></span>
+              <span>Praça Dom Bosco, 88 - Carmo, Barbacena - MG, <br> Brasil</span>
+            </div>
+            <div class="d-flex site-info align-items-center">
+              <span class="block-icon mr-3"><span class="icon-clock-o"></span></span>
+              <span>Segunda - Sexta | 8:00 - 18:00 <br> Sábado FECHADO</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </header>
+
+      <div class="ftco-blocks-cover-1">
+        <!-- data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')" -->
+       <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('{$GET_TEMA}/images/fisica.jpg')">
+         <div class="container">
+           <div class="row align-items-center ">
+
+             <div class="col-md-5 mt-5 pt-5">
+               <span class="text-cursive h5 text-red">Hora de arrasar!</span>
+               <p></p>
+               <h1 class="mb-3 font-weight-bold text-teal">Física</h1>
+             </div>
+
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <h2 for="" class="alerta{Verificacao::$aVisibilidade}" align="center">PREENCHA TODAS AS QUESTÕES</h2>
+
+          <form class="" action="{$REFAZER}" method="post">
+
+          <div class="container resultado{Verificacao::$rVisibilidade}">
+              <div class="card questoes">
+                <div class="card-header" style="background: {Verificacao::$resultado}">
+                  <h3>Resultados</h3>
+                </div>
+                 <div class="card-body">
+                   <blockquote class="blockquote mb-0">
+                     <label for="">Sua porcentagem de acerto foi de:</label>
+        <div class="progress" style="height: 30px;">
+          <div class="progress-bar progress-bar-striped bg-{Verificacao::$cor}" role="progressbar" style="width: {Verificacao::$soma*10}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{Verificacao::$soma*10}%</div>
+        </div>
+      </blockquote> <blockquote class="blockquote mb-0">
+        <p></p><label for="">Você acertou:</label>
+        <label class="resultado" for="" style="font-weight:bold; color: {Verificacao::$resultado};">{Verificacao::$soma}</label>
+        <label for="">das 10 questões disponíveis.</label>
+      </blockquote>
+      <button class="btn btn-outline-{Verificacao::$cor}" type="submit" name="refazer" style="float: left"><span class="icon-repeat"></span> TENTE OUTRA VEZ</button>
+     </form>
+     <a href="{$GET_ALUNO}"><button class="btn btn-outline-{Verificacao::$cor}" type="button" style="float: right"><span class="icon-home"></span> VOLTAR A SUA PÁGINA</button></a>
+                       </div>
+
+                 </div>
+               </div>
+
+     <form action="{$SOMA}" method="post">
+<!-- Questão 1 -->
+     <div class="container">
+     <div class="card questoes">
+        <div class="card-header class{Verificacao::$q1}">
+          <h3>Questão 1</h3>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <h4>Uma empresa de transporte precisa efetuar a entrega de uma encomenda o mais breve possível. Para tanto, a equipe de logística analisa o trajeto desde a empresa até o local da entrega. Ela verifica que o trajeto apresenta dois trechos de distâncias diferentes e velocidades máximas permitidas diferentes. No primeiro trecho, a velocidade máxima permitida é de 80 km/h e a distância a ser pecorrida é de 80 km. No segundo trecho, cujo comprimento vale 60 km, a velocidade máxima permitida é 120 km/h.
+
+                    Supondo que as condições de trânsito sejam favoráveis para que o veículo da empresa ande continuamente na velocidade máxima permitida, qual será o tempo necesário, em horas, para a realização da entrega?</h4>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="exampleRadios1" value="0">
+            <label class="form-check-label" for="exampleRadios1">
+             <h5>0,7</h5>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="0">
+            <label class="form-check-label" for="exampleRadios2">
+              <h5>1,4</h5>
+            </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" id="exampleRadios1" value="1">
+              <label class="form-check-label" for="exampleRadios1">
+                  <h5>1,5</h5>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="0">
+              <label class="form-check-label" for="exampleRadios2">
+                  <h5>2,0</h5>
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="0">
+                <label class="form-check-label" for="exampleRadios2">
+                    <h5>3,0</h5>
+                </label>
+              </div>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Questão 2 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q2}">
+         <h3>Questão 2</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Alguns povos indígenas ainda preservam suas tradições realizando a pesca com lanças, demonstrando uma ntável habilidade. Para fisgar um peixe em um lago com águas tranquilas o índio deve mirar abaixo da posição em que enxerga o peixe.
+
+                Ele deve proceder dessa forma porque os raios de luz</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q2" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Refletidos pelo peixe não descrevem uma trajetória retlínea no interior da água.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Emitidos pelos olhos do índio desviam sua trajetória quando passam do ar para a água.
+
+             </h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q2" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Espalhados pelo peixe são refletidos pela superfície da água.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Emitidos pelos olhos são espalhados pela superfície da água.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="1">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>Refletidos pelo peixe desviam sua trajetória quando passam da água para o ar.</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+<!-- Questão 3 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q3}">
+         <h3>Questão 3</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Um dos problemas ambientais vivenciados pela agricutura hoje em dia é a compactação do solo, devida ao intenso tráfego de máquinas cada vez mais pesadas, reduzindo a produtividade das culturas.
+
+                Uma das formas de prevenir o poblema de compactação do solo é substituir os pneus dos tratores por pneus mais
+            </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q3" id="exampleRadios1" value="1">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Largos, reduzindo a pressão sobre o solo.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Estreitos, reduzindo a pressão sobre o solo.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q3" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Largos, aumentando a pressão sobre o solo.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Estreitos, aumentando a pressão sobre o solo.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>Altos, reduzindo a pressão sobre o solo.</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 4 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q4}">
+         <h3>Questão 4</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Os carrinhos de brinquedos podem ser de vários tipos. Dentre eles, há os movidos a corda, em que uma mola em seu interior é comprimida quando a criança puxa o carrinho para trás. Ao ser solto, o carrinho entra em movimento enquanto a mola volta à sua forma inicial.
+
+                O processo de conversão de energia que ocorre no carrinho descrito também é verificado em
+
+                </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q4" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Um dínamo.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Um freio de automóvel.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q4" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Um motor a combustão.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Uma usina hidroelétrica.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="1">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>Uma atiradeira (estilingue).</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 5 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q5}">
+         <h3>Questão 5</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Um consumidor desconfia que a balança do supermecado não esta aferindo corretamente a massa dos prdutos. Ao chegar a casa resolve conferir se a balança es ta va descalibrada. Para isso, utiliza um recipiente prvido de escala volumétrica contendo 1,0 litro d’água. Ele coloca uma porção dos legumes que comprou dentro do recipiente e observa que a água atinge a marca de 1,5 litro e também que a porção não ficara totalmente submersa, com  \frac[1][3]  de seu volume fora d’água. Para concluir o teste, o consumidor, com ajuda da internet, verifica que a desidade dos legumes, em questão, é a metade da densidade da água, onde,  \rho_[agua] = 1 \frac[g][cm^[3]] . No supermercado a balança registrou a massa da porção de legumes igual a 0,500 kg (meio quilograma).
+
+                Considerando que o método adotado tenha boa precisão, o consumidor concluiu que a balança estava descalibrada e deveria ter registrado a massa da porção de legumes igual a</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q5" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>0,073 kg.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>0,167 kg</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q5" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>-0,250kg</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="1">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>0,375 kg</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>0,750kg</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+
+<!-- Questão 6 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q6}">
+         <h3>Questão 6</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Em um dia de chuva muito forte, constatou-se uma go teira sobre o centro de uma piscina coberta, formando um padrão de ondas circulares. Nessa situação, observou-se que caíam duas gotas a cada segundo. A distância entre duas cristas consecutivas era de 25 cm e cada uma delas se aproximava da borda da piscina com velocidade de 1,0 m/s. Após algum tempo a chuva diminuiu e a goteira passou a cair uma vez por segundo.
+
+                Com a diminuição da chuva, a distância entre as cristas e a velocidade de propagação da onda se tornaram, repectivamente,</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q6" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Maior que 25 cm e maior 1,0 m/s.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="1">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Maior que 25 cm e igual a 1,0 m/s.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q6" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Menor que 25 cm e menor que 1,0 m/s.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Menor que 25 cm e igual a 1,0 m/s.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+              <h5>Igual a 25 cm e igual a 1,0 m/s.</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 7 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q7}">
+         <h3>Questão 7</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>A eficiência das lâmpadas pode ser comparada utilizando a razão, considerada linear, entre a quantidade de luz produzida e o consumo. A quantidade de luz é medida pelo fluxo luminoso, cuja unidade é o lúmen (lm). O consumo está relacionado à potência elétrica da lâmpada que é medida em watt (W). Por exemplo, uma lâmpada incandescente de 40W emite cerca de 600 lm, enquanto uma lâmpada fluorescente de 40 W emite cerca de 3000 lm.</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q7" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Maior que a de uma lâmpada fluorescente de 8 W, que produz menor quantidade de luz</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Maior que a de uma lâmpada fluorescente de 40 W, que produz menor quantidade de luz.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q7" id="exampleRadios1" value="1">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Menor que a de uma lâmpada fluorescente de 8 W, que produz a mesma quantidade de luz.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Menor que a de uma lâmpada fluorescente de 40 W, pois consome maior quantidade de energia.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+              <h5>Igual a de uma lâmpada fluorescente de 4</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 8 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q8}">
+         <h3>Questão 8</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Nossa pele possui células que reagem à incidência de luz ultravioleta e produzem uma substância chamada melnina, responsável pela pigmentação da pele. Pen sando em se bronzear, uma garota vestiu um biquíni, acendeu a luz de seu quarto e deitou-se exatamente abaixo da lâmpada incandescente. Após várias horas ela percebeu que não conseguiu resultado algum.
+
+                O bronzeamento não ocorreu porque a luz emitida pela lâmpada incandescente é de
+
+                </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q8" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Baixa intensidade.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="1">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Baixa frequência.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q8" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Um espectro contínuo.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Amplitude inadequada</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+              <h5>Curto comprimento de onda.</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+<!-- Questão 9 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q9}">
+         <h3>Questão 9</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Um carrinho de brinquedo funciona por fricção. Ao ser forçado a girar suas rodas para trás, contra uma superfície rugosa, uma mola acumula energia potencial elástica. Ao soltar o brinquedo, ele se movimenta sozinho para frente e sem deslizar. Quando o carrinho se movimenta sozinho, sem deslizar, a energia potencial elástica é convertida em energia cinética pela ação da força de atrito</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q9" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Dinâmico na roda, devido ao eixo.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="1">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Estático na roda, devido à superfície rugosa.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q9" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Estático na superfície rugosa, devido à roda.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Dinâmico na superfície rugosa, devido à roda</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+              <h5>Dinâmico na roda, devido à superfície rugosa.</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+   <!-- Questão 10 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q10}">
+         <h3>Questão 10</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Um motorista que atende a uma chamada de celular é levado à desatenção, aumentando a possibilidade de acidentes ocorrerem em razão do aumento de seu tempo de reação. Considere dois motoristas, o primeiro atento e o segundo utilizando o celular enquanto dirige. Eles aceleram seus carros inicialmente a 1,00 m/s2 Em resposta a uma emergência, freiam mm uma desaceleração igual a 5,00 m/s2 O motorista atento aciona o freio à velocidade de 14,0 m/s, enquanto o desatento, em situação análoga, leva 1,00 segundo a mais para iniciar a frenagem.
+
+                Que distância o motorista desatento percorre a mais do que o motorista atento, até a parada total dos carros?</h4>
+
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q10" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>2,90 m</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5> 14,0 m</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q10" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>14,5 m</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>0,50 m</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="1">
+               <label class="form-check-label" for="exampleRadios2">
+              <h5>17,4 m </h5>
+            </label>
+          </div>
+      </blockquote>
+    </div>
+  </div>
+  <div class="" style="display: {Verificacao::$bVisibilidade}">
+  <button class="btn btn-outline-info" type="submit" name="button" style="align-self: center; margin-top:0.7%;"><span class="icon-check"></span> ENVIAR</button>
+  </div>
+</div>
+
+   </form>
+
+
+
+              <!-- Social -->
+              <div class="social_container">
+                <ul class="d-flex flex-row align-items-start justify-content-start">
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+
+
+  <div align='center'>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+
+  </div>
+
+
+  <script src="{$GET_TEMA}/js/jquery-3.2.1.min.js"></script>
+  <script src="{$GET_TEMA}/styles/bootstrap-4.1.2/popper.js"></script>
+  <script src="{$GET_TEMA}/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/TweenMax.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/TimelineMax.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/scrollmagic/ScrollMagic.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/animation.gsap.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/ScrollToPlugin.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/progressbar/progressbar.js"></script>
+  <script src="{$GET_TEMA}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+  <script src="{$GET_TEMA}/plugins/easing/easing.js"></script>
+  <script src="{$GET_TEMA}/plugins/parallax-js-master/parallax.min.js"></script>
+  <script src="{$GET_TEMA}/js/custom.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+  </html>

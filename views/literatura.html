@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="pt-br">
+
+  <head>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{$GET_TEMA}/images/favicon.ico">
+
+    <title>Scheduler</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="{$GET_TEMA}/https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="{$GET_TEMA}/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="{$GET_TEMA}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/aos.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/calendario.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/questoes.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="vCard template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="{$GET_TEMA}/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/responsive.css">
+
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{$GET_TEMA}/css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <div class="site-wrap" id="home-section">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <header class="site-navbar site-navbar-target" role="banner">
+
+      <div class="container mb-3">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto">
+            <img style="margin-bottom: -25%; margin-top: -20%" src="{$GET_TEMA}/images/logo.png" alt="">
+          </div>
+          <div class="site-quick-contact d-none d-lg-flex ml-auto ">
+            <div class="d-flex site-info align-items-center mr-5">
+              <span class="block-icon mr-3"><span class="icon-map-marker text-yellow"></span></span>
+              <span>Praça Dom Bosco, 88 - Carmo, Barbacena - MG, <br> Brasil</span>
+            </div>
+            <div class="d-flex site-info align-items-center">
+              <span class="block-icon mr-3"><span class="icon-clock-o"></span></span>
+              <span>Segunda - Sexta | 8:00 - 18:00 <br> Sábado FECHADO</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </header>
+
+      <div class="ftco-blocks-cover-1">
+        <!-- data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')" -->
+       <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('{$GET_TEMA}/images/literatura.jpg')">
+         <div class="container">
+           <div class="row align-items-center ">
+
+             <div class="col-md-5 mt-5 pt-5">
+               <span class="text-cursive h5 text-red">Hora de arrasar!</span>
+               <p></p>
+               <h1 class="mb-3 font-weight-bold text-teal">Literatura</h1>
+             </div>
+
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <h2 for="" class="alerta{Verificacao::$aVisibilidade}" align="center">PREENCHA TODAS AS QUESTÕES</h2>
+
+          <form class="" action="{$REFAZER}" method="post">
+
+          <div class="container resultado{Verificacao::$rVisibilidade}">
+              <div class="card questoes">
+                <div class="card-header" style="background: {Verificacao::$resultado}">
+                  <h3>Resultados</h3>
+                </div>
+                 <div class="card-body">
+                   <blockquote class="blockquote mb-0">
+                     <label for="">Sua porcentagem de acerto foi de:</label>
+        <div class="progress" style="height: 30px;">
+          <div class="progress-bar progress-bar-striped bg-{Verificacao::$cor}" role="progressbar" style="width: {Verificacao::$soma*10}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{Verificacao::$soma*10}%</div>
+        </div>
+      </blockquote> <blockquote class="blockquote mb-0">
+        <p></p><label for="">Você acertou:</label>
+        <label class="resultado" for="" style="font-weight:bold; color: {Verificacao::$resultado};">{Verificacao::$soma}</label>
+        <label for="">das 10 questões disponíveis.</label>
+      </blockquote>
+      <button class="btn btn-outline-{Verificacao::$cor}" type="submit" name="refazer" style="float: left"><span class="icon-repeat"></span> TENTE OUTRA VEZ</button>
+     </form>
+     <a href="{$GET_ALUNO}"><button class="btn btn-outline-{Verificacao::$cor}" type="button" style="float: right"><span class="icon-home"></span> VOLTAR A SUA PÁGINA</button></a>
+                       </div>
+
+                 </div>
+               </div>
+
+     <form action="{$SOMA}" method="post">
+
+<!-- Questão 1 -->
+     <div class="container">
+     <div class="card questoes">
+        <div class="card-header class{Verificacao::$q1}">
+          <h3>Questão 1</h3>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <h4>Sobre a obra de Ferreira Gullar estão corretas as seguintes proposições:
+                I. Uma das principais características da obra de Ferreira Gullar é a reflexão sobre a criação artística. Para o poeta, a poesia é fruto de um trabalho árduo, racional, que implica fazer e desfazer o texto até que ele alcance a sua forma mais adequada.
+                II. Ferreira Gullar integrou o grupo de poetas religiosos que se formou no Rio de Janeiro entre as décadas de 1930 e 40. Sua poesia é dividida em duas fases: a fase transcendental e a fase material.
+                III. A poesia de Ferreira Gullar destaca-se pelo engajamento político. Essa produção poética engajada ganhou força a partir dos anos de 1960, quando o poeta rompeu com a poesia de vanguarda, aderindo ao Centro Popular de Cultura (CPC).
+                IV. Explorando propriedades gráficas e vocais das palavras, rompendo com a ortografia e com as convenções da lírica tradicional, Ferreira Gullar integrou de maneira circunstancial o movimento concretista, do qual se afastou em virtude de discordâncias em relação às suas propostas teóricas.
+                V. Propôs um corte profundo entre a poesia romântica e a poesia moderna, criando um novo conceito de poesia ao dessacralizar a chamada “poesia profunda”, ou seja, a poesia em que predominam os versos de sentimentos ou de abordagem introspectiva. Sua poesia é antilírica, presa ao real e direcionada ao intelecto, não às emoções.
+                </h4>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="exampleRadios1" value="0">
+            <label class="form-check-label" for="exampleRadios1">
+             <h5>I, II e V estão corretas</h5>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="1">
+            <label value="1" class="form-check-label" for="exampleRadios2">
+              <h5>III e IV estão corretas</h5>
+            </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" id="exampleRadios1" value="0">
+              <label class="form-check-label" for="exampleRadios1">
+                  <h5>III e V estão corretas</h5>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="0">
+              <label class="form-check-label" for="exampleRadios2">
+                  <h5>I e IV estão corretas</h5>
+              </label>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Questão 2 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q2}">
+         <h3>Questão 2</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(PUC - PR)
+            Leia os fragmentos abaixo, retirados do poema Muitas vozes, de Ferreira Gullar, para responder à questão.
+            Meu poema<br>
+            é um tumulto:<br>
+            a fala<br>
+            que nele fala<br>
+            outras vozes<br>
+            arrasta em alarido.<br>
+            (...)<br><br>
+            A água que ouviste<br>
+            num soneto de Rilke<br>
+            os ínfimos rumores no capim<br>
+            o sabor<br>
+            do hortelã<br>
+            (…)<br><br>
+            da manhã<br>
+            tudo isso em ti<br>
+            se deposita<br>
+            e cala.<br>
+            <br>
+            Até que de repente<br>
+            um susto<br>
+            ou uma ventania<br>
+            (que o poema dispara)<br>
+            chama<br>
+            esses fósseis à fala.<br>
+            <br>
+            Meu poema<br>
+            é um tumulto, um alarido:<br>
+            basta apurar o ouvido.<br>
+            <br>
+            I. É um exemplo de metapoesia, um dos vários temas recorrentes nesta obra.<br>
+            II. A intertextualidade surge como uma das muitas vozes presentes no poema.<br>
+            III. Fósseis, no poema, é uma referência aos mortos do eu poético, que também são vozes do poema.<br>
+            IV. Apurar o ouvido, no último verso, remete à percepção do material de que se compõe o poema.<br>
+            V. Esse é um dos poucos poemas de Ferreira Gullar, nesta obra, em que a morte se faz presente.<br><br>
+            Assinale a alternativa CORRETA:<br>
+
+              </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q2" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Somente as assertivas I e IV são verdadeiras</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>As assertivas I, II e V são verdadeiras</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q2" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Somente a assertiva I é falsa</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="1">
+             <label value="1" class="form-check-label" for="exampleRadios2">
+              <h5>As assertivas I, II, III, IV são verdadeiras</h5>
+             </label>
+           </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+<!-- Questão 3 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q3}">
+         <h3>Questão 3</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UFRR) A obra romanesca de José de Alencar introduziu na literatura brasileira quatro tipos de romances: indianista, histórico, urbano e regional. Desses quatro tipos, os que tiveram sua vida prolongada, de forma mais clara e intensa, até o Modernismo, ainda que modificados, foram:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q3" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Indianista e histórico</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Histórico e urbano</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q3" id="exampleRadios1" value="1">
+             <label value="1" class="form-check-label" for="exampleRadios1">
+              <h5>Urbano e regional</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Regional e indianista</h5>
+             </label>
+           </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 4 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q4}">
+         <h3>Questão 4</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UFPR) Qual das informações sobre José de Alencar é correta?</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q4" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Alencar inaugurou a ficção brasileira com a publicação de sua obra Cinco minutos</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Alencar foi um romancista que soube conciliar um romantismo exacerbado com certas reminiscências do Arcadismo, manifestas, principalmente, na linguagem clássica</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q4" id="exampleRadios1" value="1">
+             <label value="1" class="form-check-label" for="exampleRadios1">
+              <h5>Alencar, apesar de todo o idealismo romântico, conseguiu, nas obras Lucíola e Senhora, captar e denunciar certos aspectos profundos, recalcados, da realidade social e individual, em que podemos detectar um pré-realismo ainda inseguro</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>A obra de José de Alencar, objetivando atingir a História do Brasil e a síntese de suas origens, volta-se exclusivamente para assuntos indígenas e regionalistas, sem incursões pelo romance urbano</h5>
+             </label>
+           </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 5 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q5}">
+         <h3>Questão 5</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Quanto à temática e à cronologia, José de Alencar está enquadrado na seguinte estética:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q5" id="exampleRadios1" value="1">
+           <label value="1" class="form-check-label" for="exampleRadios1">
+            <h5>Romântica</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Simbolista</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q5" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Ultrarromântica</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Condoreira</h5>
+             </label>
+           </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+
+<!-- Questão 6 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q6}">
+         <h3>Questão 6</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>São características da linguagem literária, EXCETO:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q6" id="exampleRadios1" value="1">
+           <label value="1" class="form-check-label" for="exampleRadios1">
+            <h5>Variabilidade</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Multissignificação</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q6" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Denotação</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Liberdade na criação</h5>
+             </label>
+           </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 7 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q7}">
+         <h3>Questão 7</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Sobre os textos literários, é incorreto afirmar:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q7" id="exampleRadios1" value="1">
+           <label value="1" class="form-check-label" for="exampleRadios1">
+            <h5>Possui grande compromisso com a clareza e a objetividade, podendo ser encontrada em reportagens, notícias, manuais de instrução e outros textos cuja principal característica seja a informatividade</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>O discurso literário, diferentemente do discurso adotado em nosso dia a dia, pode apresentar diversos recursos estilísticos capazes de oferecer múltiplas leituras e interpretações</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q7" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Uma das principais características da linguagem literária é a liberdade criativa, permitindo que o artista desvincule-se dos padrões convencionais da língua, bem como da gramática normativa que a rege</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>A complexidade da linguagem literária é notada no uso de conotações e metáforas, nas quais as palavras extrapolam seu nível semântico</h5>
+             </label>
+           </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 8 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q8}">
+         <h3>Questão 8</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>A linguagem literária pode ser encontrada nos seguintes gêneros:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q8" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>poemas, reportagens, manuais de instrução e textos injuntivos</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="1">
+           <label value="1" class="form-check-label" for="exampleRadios2">
+             <h5>crônica, conto, poemas e narrativas de ficção</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q8" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>textos prescritivos, notícias, novelas e romance</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>textos jornalísticos, textos didáticos, verbetes de dicionários e enciclopédias e propagandas publicitárias</h5>
+             </label>
+           </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+<!-- Questão 9 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q9}">
+         <h3>Questão 9</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UEL)
+            Assinale a letra correspondente à alternativa que preenche corretamente as lacunas do trecho apresentado.
+            Simplificando a linguagem lírica de Cláudio Manuel da Costa, mas evitando igualmente a diluição dos valores poéticos no sentimentalismo, as .............. mais densas, dedicadas a ............., fizeram de .............. uma figura central do nosso Arcadismo.
+            </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q9" id="exampleRadios1" value="1">
+           <label value="1" class="form-check-label" for="exampleRadios1">
+            <h5>crônicas – Marília – Dirceu </h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>liras – Marília – Gonzaga </h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q9" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>sátiras – Dirceu – Gonzaga</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>liras – Gonzaga – Dirceu</h5>
+             </label>
+           </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+   <!-- Questão 10 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q10}">
+         <h3>Questão 10</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Sobre o Arcadismo, estão corretas as seguintes proposições:
+            I. Originou-se em Minas Gerais, e seu aparecimento tem relação direta com o grande crescimento urbano verificado, no século XVIII, nas cidades mineiras, cuja vida econômica girava em torno da extração de ouro.
+            II. O Arcadismo foi uma manifestação artística que encontrou representantes também na música (o nascimento da ópera), na arquitetura (observa-se forte adesão ao estilo na construção de igrejas) e nas artes plásticas (destaque para as esculturas de Antônio Francisco Lisboa, o Aleijadinho).
+            III. O conceptismo e o cultismo são características da linguagem árcade. No conceptismo, há o jogo de ideias, a concisão e a ordem para convencer por meio do raciocínio; no cultismo, há o uso excessivo de figuras de linguagem e jogo de palavras, recursos literários que tinham como objetivo evidenciar a habilidade verbal do escritor,
+            IV. O movimento árcade tinha como principal intenção questionar a estética barroca, restabelecendo o equilíbrio, a harmonia e a simplicidade da literatura renascentista. Os primeiros árcades, jovens escritores portugueses, propuseram a eliminação dos rebuscamentos do Barroco, baseando-se nos preceitos do Iluminismo.
+            V. No Brasil, o Arcadismo manifestou-se pela primeira vez no ano de 1768 e representou o que de melhor se fez culturalmente no período colonial brasileiro. “Obras Poéticas”, de Cláudio Manuel da Costa, foi a primeira publicação desse novo estilo que pretendia, acima de tudo, que sua poesia fosse apreciada pelo seu valor poético ou literário.
+             </h4>
+
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q10" id="exampleRadios1" value="1">
+           <label value="1" class="form-check-label" for="exampleRadios1">
+            <h5>I, IV e V</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>II e III</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q10" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>I, II e V</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>III e V</h5>
+             </label>
+           </div>
+         </blockquote>
+       </div>
+     </div>
+     <div class="" style="display: {Verificacao::$bVisibilidade}">
+     <button class="btn btn-outline-info" type="submit" name="button" style="align-self: center; margin-top:0.7%;"><span class="icon-check"></span> ENVIAR</button>
+     </div>
+   </div>
+
+   </form>
+
+
+
+
+              <!-- Social -->
+              <div class="social_container">
+                <ul class="d-flex flex-row align-items-start justify-content-start">
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+
+
+  <div align='center'>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+
+  </div>
+
+
+  <script src="{$GET_TEMA}/js/jquery-3.2.1.min.js"></script>
+  <script src="{$GET_TEMA}/styles/bootstrap-4.1.2/popper.js"></script>
+  <script src="{$GET_TEMA}/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/TweenMax.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/TimelineMax.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/scrollmagic/ScrollMagic.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/animation.gsap.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/ScrollToPlugin.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/progressbar/progressbar.js"></script>
+  <script src="{$GET_TEMA}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+  <script src="{$GET_TEMA}/plugins/easing/easing.js"></script>
+  <script src="{$GET_TEMA}/plugins/parallax-js-master/parallax.min.js"></script>
+  <script src="{$GET_TEMA}/js/custom.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+  </html>

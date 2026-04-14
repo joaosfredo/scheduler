@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="pt-br">
+
+  <head>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{$GET_TEMA}/images/favicon.ico">
+
+    <title>Scheduler</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="{$GET_TEMA}/https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{$GET_TEMA}/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="{$GET_TEMA}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/aos.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/calendario.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/questoes.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="vCard template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="{$GET_TEMA}/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/responsive.css">
+
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{$GET_TEMA}/css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <div class="site-wrap" id="home-section">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <header class="site-navbar site-navbar-target" role="banner">
+
+      <div class="container mb-3">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto">
+            <img style="margin-bottom: -25%; margin-top: -20%" src="{$GET_TEMA}/images/logo.png" alt="">
+          </div>
+          <div class="site-quick-contact d-none d-lg-flex ml-auto ">
+            <div class="d-flex site-info align-items-center mr-5">
+              <span class="block-icon mr-3"><span class="icon-map-marker text-yellow"></span></span>
+              <span>Praça Dom Bosco, 88 - Carmo, Barbacena - MG, <br> Brasil</span>
+            </div>
+            <div class="d-flex site-info align-items-center">
+              <span class="block-icon mr-3"><span class="icon-clock-o"></span></span>
+              <span>Segunda - Sexta | 8:00 - 18:00 <br> Sábado FECHADO</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </header>
+
+      <div class="ftco-blocks-cover-1">
+        <!-- data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')" -->
+       <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('{$GET_TEMA}/images/historia.jpg')">
+         <div class="container">
+           <div class="row align-items-center ">
+
+             <div class="col-md-5 mt-5 pt-5">
+               <span class="text-cursive h5 text-red">Hora de arrasar!</span>
+               <p></p>
+               <h1 class="mb-3 font-weight-bold text-teal">História</h1>
+             </div>
+
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <h2 for="" class="alerta{Verificacao::$aVisibilidade}" align="center">PREENCHA TODAS AS QUESTÕES</h2>
+
+          <form class="" action="{$REFAZER}" method="post">
+
+          <div class="container resultado{Verificacao::$rVisibilidade}">
+              <div class="card questoes">
+                <div class="card-header" style="background: {Verificacao::$resultado}">
+                  <h3>Resultados</h3>
+                </div>
+                 <div class="card-body">
+                   <blockquote class="blockquote mb-0">
+                     <label for="">Sua porcentagem de acerto foi de:</label>
+        <div class="progress" style="height: 30px;">
+          <div class="progress-bar progress-bar-striped bg-{Verificacao::$cor}" role="progressbar" style="width: {Verificacao::$soma*10}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{Verificacao::$soma*10}%</div>
+        </div>
+      </blockquote> <blockquote class="blockquote mb-0">
+        <p></p><label for="">Você acertou:</label>
+        <label class="resultado" for="" style="font-weight:bold; color: {Verificacao::$resultado};">{Verificacao::$soma}</label>
+        <label for="">das 10 questões disponíveis.</label>
+      </blockquote>
+      <button class="btn btn-outline-{Verificacao::$cor}" type="submit" name="refazer" style="float: left"><span class="icon-repeat"></span> TENTE OUTRA VEZ</button>
+     </form>
+     <a href="{$GET_ALUNO}"><button class="btn btn-outline-{Verificacao::$cor}" type="button" style="float: right"><span class="icon-home"></span> VOLTAR A SUA PÁGINA</button></a>
+                       </div>
+
+                 </div>
+               </div>
+
+     <form action="{$SOMA}" method="post">
+<!-- Questão 1 -->
+     <div class="container">
+     <div class="card questoes">
+        <div class="card-header class{Verificacao::$q1}">
+          <h3>Questão 1</h3>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <h4>O rompimento pelos nazistas do Pacto Germano-Soviético firmado entre a Alemanha e a União das Repúblicas Socialistas Soviéticas (URSS), no ano de 1939, fez com que a União Soviética entrasse na Segunda Guerra em 1943. O que foi o Pacto Germano-Soviético?            </h4>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="exampleRadios1" value="0">
+            <label class="form-check-label" for="exampleRadios1">
+             <h5>Política de acordos efetivada por Hitler e Churchill </h5>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="0">
+            <label class="form-check-label" for="exampleRadios2">
+              <h5>Efetivação do Pacto anti-Komintern entre Alemanha, URSS e Japão.</h5>
+            </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" id="exampleRadios1" value="1">
+              <label class="form-check-label" for="exampleRadios1">
+                  <h5>Política de acordos entre Hitler e Stálin de não agressão e neutralidade entre Alemanha e União Soviética por dez anos.                  </h5>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="0">
+              <label class="form-check-label" for="exampleRadios2">
+                  <h5>   Pacto que assegurava à Alemanha o direito de incorporar territórios poloneses com a permissão da França e da Inglaterra.
+                    </h5>
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="0">
+                <label class="form-check-label" for="exampleRadios2">
+                    <h5>Política de não agressão entre Alemanha, Inglaterra, Japão e França.
+                      </h5>
+                </label>
+              </div>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Questão 2 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q2}">
+         <h3>Questão 2</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Os Estados Unidos entraram fundamentalmente na Segunda Guerra Mundial no ano de 1941. Quais foram os principais fatores que causaram a entrada dos Estados Unidos na guerra?
+            </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q2" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>A ocupação nazista da Rússia em 1941.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>O confronto dos Estados Unidos com a marinha japonesa na Batalha de Midway no ano de 1942.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q2" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5> A incorporação dos territórios poloneses pela Alemanha perdidos pelos alemães durante o Tratado de Versalhes em 1919.
+                </h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>A derrota russa pelos alemães no ano de 1942 na Batalha de Stalingrado.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="1">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>Os acordos de solidariedade com a Inglaterra na chamada Carta do Atlântico e os ataques japoneses à base de Pearl Harbor.
+                  </h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+<!-- Questão 3 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q3}">
+         <h3>Questão 3</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>Leia este trecho, em que se faz referência à construção do mundo moderno:
+
+              “... os modernos são os primeiros a demonstrar que o conhecimento verdadeiro só pode nascer do trabalho interior realizado pela razão, graças a seu próprio esforço, sem aceitar dogmas religiosos, preconceitos sociais, censuras políticas e os dados imediatos fornecidos pelos sentidos”. (CHAUÍ, Marilena. "Primeira filosofia". 4. ed. São Paulo: Brasiliense, 1985. p. 80.)
+
+              A leitura do trecho nos permite identificar características do Renascimento. Assinale a afirmativa que contém essas características.
+
+
+            </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q3" id="exampleRadios1" value="1">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Nova postura com relação ao conhecimento, a qual transforma o modo de entendimento do mundo e do próprio homem.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Ruptura com as concepções antropocêntricas, a qual modifica as relações hierárquicas senhoriais.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q3" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Ruptura com o mundo antigo, a qual caracteriza um distanciamento do homem face aos diversos movimentos religiosos.
+                </h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Adaptações do pensamento contemplativo, as quais reafirmam a primazia do conhecimento da natureza em relação ao homem.
+                </h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>Adaptações do pensamento contemplativo,ruptura com as concepções antropocêntricas. </h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 4 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q4}">
+         <h3>Questão 4</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(Enem)
+
+              (...) Depois de longas investigações, convenci-me por fim de que o Sol é uma estrela fixa rodeada de planetas que giram em volta dela e de que ela é o centro e a chama. Que, além dos planetas principais, há outros de segunda ordem que circulam primeiro como satélites em redor dos planetas principais e com estes em redor do Sol. (...) Não duvido de que os matemáticos sejam da minha opinião, se quiserem dar-se ao trabalho de tomar conhecimento, não superficialmente, mas duma maneira aprofundada, das demonstrações que darei nesta obra. Se alguns homens ligeiros e ignorantes quiserem cometer contra mim o abuso de invocar alguns passos da Escritura (sagrada), a que torçam o sentido, desprezarei os seus ataques: as verdades matemáticas não devem ser julgadas senão por matemáticos. (COPÉRNICO, N. De Revolutionibus orbium caelestium)
+
+              Aqueles que se entregam à prática sem ciência são como o navegador que embarca em um navio sem leme nem bússola. Sempre a prática deve fundamentar-se em boa teoria. Antes de fazer de um caso uma regra geral, experimente-o duas ou três vezes e verifique se as experiências produzem os mesmos efeitos. Nenhuma investigação humana pode se considerar verdadeira ciência se não passa por demonstrações matemáticas. (VINCI, Leonardo da. Carnets)
+
+              O aspecto a ser ressaltado em ambos os textos para exemplificar o racionalismo moderno é
+              </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q4" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>A fé como guia das descobertas.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>O senso crítico para se chegar a Deus.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q4" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>A limitação da ciência pelos princípios bíblicos.
+                </h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="1">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>A importância da experiência e da observação.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>O princípio da autoridade e da tradição.
+                  </h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 5 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q5}">
+         <h3>Questão 5</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(Uneb-BA)
+              Leia atentamente os relatos a seguir:
+
+              "O pintor que trabalha rotineira e apressadamente, sem compreender as coisas, é como o espelho que absorve tudo o que encontra diante de si, sem tomar conhecimento".
+              “Experiência, mãe de toda a certeza”
+
+              “Só o pintor universal tem valor”
+
+              São trechos de Leonardo da Vinci, personagem destacada do Renascimento. Neles, o autor exalta compreensão, experiência, universalismo, valores que marcaram o:
+              </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q5" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5> Teocentrismo, como princípio básico do pensamento moderno.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Epicurismo, em alusão aos princípios dominantes na Idade Média.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q5" id="exampleRadios1" value="1">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Humanismo, como postura ideológica que configurou a transição para a Idade Moderna. 
+                </h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5> Confucionismo, por sua marcada oposição ao conjunto dos conhecimentos orientais.
+                </h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>Escolasticismo, dado que admitia a fé como única fonte de conhecimento.
+                  </h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+
+<!-- Questão 6 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q6}">
+         <h3>Questão 6</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UEL)
+              O Renascimento, amplo movimento artístico, literário e científico, expandiu-se da Península Itálica por quase toda a Europa, provocando transformações na sociedade. Sobre o tema, é correto afirmar que:
+              </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q6" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5> O racionalismo renascentista reforçou o princípio da autoridade da ciência teológica e da tradição medieval.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5> Houve o resgate, pelos intelectuais renascentistas, dos ideais medievais ligados aos dogmas do catolicismo, sobretudo da concepção teocêntrica de mundo.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q6" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Nesse período, reafirmou-se a ideia de homem cidadão, que terminou por enfraquecer os sentimentos de identidade nacional e cultural, os quais contribuíram para o fim das monarquias absolutas</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>O humanismo pregou a determinação das ações humanas pelo divino e negou que o homem tivesse a capacidade de agir sobre o mundo, transformando-o de acordo com sua vontade e interesse.
+                </h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="1">
+               <label class="form-check-label" for="exampleRadios2">
+              <h5>Os estudiosos do período buscaram apoio no método experimental e na reflexão racional, valorizando a natureza e o ser humano. 
+                </h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 7 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q7}">
+         <h3>Questão 7</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(PUC-MG)
+
+              O Renascimento, enquanto fenômeno cultural observado na Europa Ocidental no início da Idade Moderna, encontra-se inserido no processo de transição do feudalismo para o capitalismo, expressando o pensamento e a visão de mundos próprios de uma sociedade mercantil e, portanto, mais aberta e dinâmica.  Manifestando-se principalmente através das artes e da filosofia, o movimento renascentista tinha como eixo
+              </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q7" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>A sabedoria popular e o domínio da maioria, como mecanismo de combate ao poder aristocrático e de oposição aos novos segmentos sociais em ascensão.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>A oposição a todas as religiões organizadas, pois os princípios religiosos impediam a liberdade de opinião e tornavam o homem alienado. A igualdade jurídica de todos os indivíduos, suprimindo-se os privilégios de classe e equiparando os direitos e obrigações dos cidadãos.
+              </h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q7" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>A liberdade de trabalho inerente a qualquer pessoa, como instrumento capaz de possibilitar a criação e o crescimento do ser humano, sendo necessário abolir as corporações de ofício.
+                </h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="1">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>A valorização do homem por sua razão e por suas criações, difundindo a confiança nas potencialidades humanas e superando o misticismo dominante no período medieval. 
+                </h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+              <h5>O Racionalismo e o Geocentrismo (convicção de que tudo pode ser explicado pela razão e pela ciência; concepção de que a Terra é o centro do universo).
+                </h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 8 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q8}">
+         <h3>Questão 8</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(FEI SP/2000)
+              Sobre os conceitos de escravidão e de servidão,
+              podemos afirmar:
+              I) São sinônimos e significam a submissão total de um
+              indivíduo a outro.
+              II) A escravidão implica na transformação da pessoa
+              em bem, o que significa que ela pode ser vendida,
+              comprada, alugada etc. Isso já não ocorre com o
+              servo.
+              III) A servidão existiu em toda a Europa durante o
+              período medieval e, na Europa Oriental e na Rússia,
+              sobreviveu até meados do século XIX.</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q8" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>Apenas I está correta.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>Apenas I e II estão corretas</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q8" id="exampleRadios1" value="1">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>Apenas II e III estão corretas.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Apenas III está correta.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+              <h5>Apenas II está correta.
+                </h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+<!-- Questão 9 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q9}">
+         <h3>Questão 9</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UEFS BA/2012)
+              Ao afirmar que, na Idade Média, “fora da Igreja não
+              havia campo contínuo de governo”, o texto evidencia
+              que </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q9" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>A ameaça dos bárbaros nórdicos (vikings) fortalecia o caráter fracionado da geopolítica medieval.
+                </h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>A Igreja era a única instituição a dominar política e economicamente o território da Europa Medieval</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q9" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>O despotismo e a intolerância do catolicismo medieval asseguravam a unidade geopolítica europeia. </h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>Os laços que garantiam as unidades políticas medievais obedeciam a tradições e a critérios estabelecidos no antigo Império Romano.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="1">
+               <label class="form-check-label" for="exampleRadios2">
+              <h5>A geopolítica da Europa Medieval caracterizava-se, com exceção da Igreja, pela formação de unidades políticas fundamentadas na fragmentação.</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+   <!-- Questão 10 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q10}">
+         <h3>Questão 10</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UEFS BA/2012)
+              As relações de servidão, que se constituíram como bases
+              do trabalho, no modo de produção feudal,
+              apresentavam como característica principal</h4>
+
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q10" id="exampleRadios1" value="1">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>A indissolubilidade dos laços existentes entre o
+                trabalhador e a terra.</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>O direito de vida e de morte do senhor sobre a
+                pessoa do servo</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q10" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>O direito de livre circulação e de livre associação
+                  entre o trabalhador e a cidade.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>O livre exercício de qualquer prática religiosa por
+                  parte do trabalhador e de sua família.</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+              <h5>O controle do número de filhos, como condição de
+                  permanência da família servil nas terras do senhor.</h5>
+               </label>
+             </div>
+           </blockquote>
+         </div>
+       </div>
+       <div class="" style="display: {Verificacao::$bVisibilidade}">
+       <button class="btn btn-outline-info" type="submit" name="button" style="align-self: center; margin-top:0.7%;"><span class="icon-check"></span> ENVIAR</button>
+       </div>
+     </div>
+
+     </form>
+
+
+
+              <!-- Social -->
+              <div class="social_container">
+                <ul class="d-flex flex-row align-items-start justify-content-start">
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+
+
+  <div align='center'>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+
+  </div>
+
+
+  <script src="{$GET_TEMA}/js/jquery-3.2.1.min.js"></script>
+  <script src="{$GET_TEMA}/styles/bootstrap-4.1.2/popper.js"></script>
+  <script src="{$GET_TEMA}/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/TweenMax.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/TimelineMax.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/scrollmagic/ScrollMagic.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/animation.gsap.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/ScrollToPlugin.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/progressbar/progressbar.js"></script>
+  <script src="{$GET_TEMA}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+  <script src="{$GET_TEMA}/plugins/easing/easing.js"></script>
+  <script src="{$GET_TEMA}/plugins/parallax-js-master/parallax.min.js"></script>
+  <script src="{$GET_TEMA}/js/custom.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+  </html>

@@ -1,0 +1,41 @@
+.questoes{
+    margin-top: 5%;
+}
+
+.resultado{
+  margin-top: 1%;
+}
+
+.class{
+  background: #009ACD !important;
+}
+
+.class1{
+  background: #00EE00 !important;
+}
+
+.class0{
+  background: #FF0000 !important;
+}
+
+.resultado0{
+    display: none;
+}
+
+.resultado1{
+  display: block;
+}
+
+.alerta0{
+  display: none;
+}
+
+.alerta1{
+  display: block;
+  font-weight: bold;
+  margin-top: 2%;
+  margin-bottom: -3%;
+  font-size: 25px;
+  color: #FF0000
+
+}

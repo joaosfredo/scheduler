@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="pt-br">
+
+  <head>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{$GET_TEMA}/images/favicon.ico">
+
+    <title>Scheduler</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="{$GET_TEMA}/https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{$GET_TEMA}/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="{$GET_TEMA}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/aos.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/calendario.css">
+    <link rel="stylesheet" href="{$GET_TEMA}/css/questoes.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="vCard template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="{$GET_TEMA}/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/css/responsive.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{$GET_TEMA}/css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <div class="site-wrap" id="home-section">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <header class="site-navbar site-navbar-target" role="banner">
+
+      <div class="container mb-3">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto">
+            <img style="margin-bottom: -25%; margin-top: -20%" src="{$GET_TEMA}/images/logo.png" alt="">
+          </div>
+          <div class="site-quick-contact d-none d-lg-flex ml-auto ">
+            <div class="d-flex site-info align-items-center mr-5">
+              <span class="block-icon mr-3"><span class="icon-map-marker text-yellow"></span></span>
+              <span>Praça Dom Bosco, 88 - Carmo, Barbacena - MG, <br> Brasil</span>
+            </div>
+            <div class="d-flex site-info align-items-center">
+              <span class="block-icon mr-3"><span class="icon-clock-o"></span></span>
+              <span>Segunda - Sexta | 8:00 - 18:00 <br> Sábado FECHADO</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </header>
+
+      <div class="ftco-blocks-cover-1">
+        <!-- data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')" -->
+       <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('{$GET_TEMA}/images/matematica.jpg')">
+         <div class="container">
+           <div class="row align-items-center ">
+
+             <div class="col-md-5 mt-5 pt-5">
+               <span class="text-cursive h5 text-red">Hora de arrasar!</span>
+               <p></p>
+               <h1 class="mb-3 font-weight-bold text-teal">Matemática</h1>
+             </div>
+
+           </div>
+         </div>
+       </div>
+     </div>
+
+<h2 for="" class="alerta{Verificacao::$aVisibilidade}" align="center">PREENCHA TODAS AS QUESTÕES</h2>
+
+     <form class="" action="{$REFAZER}" method="post">
+
+     <div class="container resultado{Verificacao::$rVisibilidade}">
+         <div class="card questoes">
+           <div class="card-header" style="background: {Verificacao::$resultado}">
+             <h3>Resultados</h3>
+           </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <label for="">Sua porcentagem de acerto foi de:</label>
+   <div class="progress" style="height: 30px;">
+     <div class="progress-bar progress-bar-striped bg-{Verificacao::$cor}" role="progressbar" style="width: {Verificacao::$soma*10}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{Verificacao::$soma*10}%</div>
+   </div>
+ </blockquote> <blockquote class="blockquote mb-0">
+   <p></p><label for="">Você acertou:</label>
+   <label class="resultado" for="" style="font-weight:bold; color: {Verificacao::$resultado};">{Verificacao::$soma}</label>
+   <label for="">das 10 questões disponíveis.</label>
+ </blockquote>
+ <button class="btn btn-outline-{Verificacao::$cor}" type="submit" name="refazer" style="float: left"><span class="icon-repeat"></span> TENTE OUTRA VEZ</button>
+</form>
+<a href="{$GET_ALUNO}"><button class="btn btn-outline-{Verificacao::$cor}" type="button" style="float: right"><span class="icon-home"></span> VOLTAR A SUA PÁGINA</button></a>
+                  </div>
+
+            </div>
+          </div>
+
+
+
+<form method="POST" action="{$SOMA}">
+<!-- Questão 1 -->
+     <div class="container">
+     <div class="card questoes">
+        <div class="card-header class{Verificacao::$q1}">
+          <h3>Questão 1</h3>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <h4>(PUC-RIO 2009) Temos uma progressão aritmética de 20 termos onde o 1º termo é igual a 5. A soma de todos os termos dessa progressão aritmética é 480. O décimo termo é igual a:</h4>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="exampleRadios1" value="0">
+            <label class="form-check-label" for="exampleRadios2">
+             <h5>20</h5>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="0">
+            <label  class="form-check-label"  for="exampleRadios2">
+              <h5>21</h5>
+            </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" id="exampleRadios1" value="0">
+              <label class="form-check-label" for="exampleRadios2">
+               <h5>22</h5>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="1">
+              <label value="0" class="form-check-label" for="exampleRadios2">
+                  <h5>23</h5>
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="exampleRadios2" value="0">
+                <label class="form-check-label" for="exampleRadios2">
+                    <h5>24</h5>
+                </label>
+              </div>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Questão 2 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q2}">
+         <h3>Questão 2</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(PUC-RIO 2010)
+              Em uma turma de Ciências da Computação formada de 40 rapazes e 40 moças, tem-se a seguinte estatística: 20% dos rapazes são fumantes; 30% das moças são fumantes. Logo, a porcentagem dos que não fumam na turma é de:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q2" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>25%</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>50%</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q2" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>60%</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>65%</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q2" id="exampleRadios2" value="1">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>75%</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+<!-- Questão 3 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q3}">
+         <h3>Questão 3</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UFMG 2009)
+              No período de um ano, certa aplicação financeira obteve um rendimento de 26%. No mesmo período, porém, ocorreu uma inflação de 20%. Então, é CORRETO afirmar que o rendimento efetivo da referida aplicação foi de:
+            </h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q3" id="exampleRadios1" value="0">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>3%</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="1">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>5%</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q3" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>5,2%</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>6%</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q3" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>4%</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 4 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q4}">
+         <h3>Questão 4</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UFPR 2009)
+              Sabendo-se que x = 2 é um zero do polinômio p(x) = 9x³ − 21x² + 4x + 4, é correto afirmar que a soma das outras duas raízes é igual a:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q4" id="exampleRadios1" value="1">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>1/3</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>3/7</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q4" id="exampleRadios1" value="0">
+             <label class="form-check-label" for="exampleRadios1">
+              <h5>1</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="0">
+             <label class="form-check-label" for="exampleRadios2">
+              <h5>4/21</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q4" id="exampleRadios2" value="0">
+               <label class="form-check-label" for="exampleRadios2">
+                <h5>4/9</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 5 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q5}">
+         <h3>Questão 5</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UFRGS 2017)
+              Considere o polinômio p definido por p(x) = x2 + 2(n + 2)x + 9n. Se as raízes de p(x) = 0 são iguais, os valores de n são:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q5" id="exampleRadios1" value="1">
+           <label class="form-check-label" for="exampleRadios1">
+            <h5>1 e 4</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="0">
+           <label class="form-check-label" for="exampleRadios2">
+             <h5>2 e 3</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q5" id="exampleRadios1" value="0">
+             <label value="0" class="form-check-label" for="exampleRadios1">
+              <h5>-1 e 4</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="0">
+             <label value="0" class="form-check-label" for="exampleRadios2">
+              <h5>2 e 4</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q5" id="exampleRadios2" value="0">
+               <label value="0" class="form-check-label" for="exampleRadios2">
+                <h5>1 e -4</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+
+<!-- Questão 6 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q6}">
+         <h3>Questão 6</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(PUC-RIO 2009)
+              Comprando dois milk shakes e um bolo gastamos R$13,00. Comprando um milk shake e dois bolos gastamos R$11,00. Quanto gastamos comprando um milk shake e um bolo?</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q6" id="exampleRadios1" value="0">
+           <label value="0" class="form-check-label" for="exampleRadios1">
+            <h5>R$ 6,00</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="0">
+           <label value="0" class="form-check-label" for="exampleRadios2">
+             <h5>R$ 7,00</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q6" id="exampleRadios1" value="1">
+             <label value="1" class="form-check-label" for="exampleRadios1">
+              <h5>R$ 8,00</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="0">
+             <label value="0" class="form-check-label" for="exampleRadios2">
+              <h5>R$ 10,00</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q6" id="exampleRadios2" value="0">
+               <label value="0" class="form-check-label" for="exampleRadios2">
+              <h5>R$ 11,00</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 7 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q7}">
+         <h3>Questão 7</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UFRGS 2017) Se x – y = 2 e x2 + y2 = 8, então x3 – y3 é igual a:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q7" id="exampleRadios1" value="0">
+           <label value="0" class="form-check-label" for="exampleRadios1">
+            <h5>12</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="0">
+           <label value="0" class="form-check-label" for="exampleRadios2">
+             <h5>14</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q7" id="exampleRadios1" value="0">
+             <label value="0" class="form-check-label" for="exampleRadios1">
+              <h5>16</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="0">
+             <label value="0" class="form-check-label" for="exampleRadios2">
+              <h5>18</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q7" id="exampleRadios2" value="1">
+               <label value="1" class="form-check-label" for="exampleRadios2">
+              <h5>20</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+<!-- Questão 8 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q8}">
+         <h3>Questão 8</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(UECE 2018.1 - 1ª Fase) A soma de todas as frações da forma n/(n+1), onde n é um elemento do conjunto [1, 2, 3, 4, 5], é:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q8" id="exampleRadios1" value="0">
+           <label value="0" class="form-check-label" for="exampleRadios1">
+            <h5>4,55</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="0">
+           <label value="0" class="form-check-label" for="exampleRadios2">
+             <h5>6,55</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q8" id="exampleRadios1" value="0">
+             <label value="0" class="form-check-label" for="exampleRadios1">
+              <h5>5,55</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="1">
+             <label value="1" class="form-check-label" for="exampleRadios2">
+              <h5>3,55</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q8" id="exampleRadios2" value="0">
+               <label value="0" class="form-check-label" for="exampleRadios2">
+              <h5>7,55</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+<!-- Questão 9 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q9}">
+         <h3>Questão 9</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(FUVEST 2016)
+              Os pontos A, B e C são colineares, AB = 5, BC = 2 e B está entre A e C. Os pontos C e D pertencem a uma circunferência com centro em A. Traça-se uma reta  perpendicular ao segmento BD passando pelo seu ponto médio. Chama-se de P a interseção de R com AD. Então, AP + BP vale:</h4>
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q9" id="exampleRadios1" value="0">
+           <label value="0" class="form-check-label" for="exampleRadios1">
+            <h5>4</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="0">
+           <label value="0" class="form-check-label" for="exampleRadios2">
+             <h5>5</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q9" id="exampleRadios1" value="0">
+             <label value="0" class="form-check-label" for="exampleRadios1">
+              <h5>6</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="1">
+             <label value="1" class="form-check-label" for="exampleRadios2">
+              <h5>7</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q9" id="exampleRadios2" value="0">
+               <label value="0" class="form-check-label" for="exampleRadios2">
+              <h5>8</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+   </div>
+
+
+   <!-- Questão 10 -->
+<div class="container">
+    <div class="card questoes">
+       <div class="card-header class{Verificacao::$q10}">
+         <h3>Questão 10</h3>
+       </div>
+       <div class="card-body">
+         <blockquote class="blockquote mb-0">
+           <h4>(Enem 2012)
+              Um produtor de café irrigado em Minas Gerais recebeu um relatório de consultoria estatística, constando, entre outras informações, o desvio padrão das produções de uma safra dos talhões de sua propriedade. Os talhões têm a mesma área de 30 000 m2 e o valor obtido para o desvio padrão foi de 90 kg/talhão. O produtor deve apresentar as informações sobre a produção e a variância dessas produções em sacas de 60 kg por hectare (10 000 m2 ).
+              A variância das produções dos talhões expressa em (sacas/hectare)2 é</h4>
+
+           <div class="form-check">
+           <input class="form-check-input" type="radio" name="q10" id="exampleRadios1" value="0">
+           <label value="0" class="form-check-label" for="exampleRadios1">
+            <h5>20,25</h5>
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="0">
+           <label value="0" class="form-check-label" for="exampleRadios2">
+             <h5>4,50</h5>
+           </label>
+         </div>
+         <div class="form-check">
+             <input class="form-check-input" type="radio" name="q10" id="exampleRadios1" value="0">
+             <label value="0" class="form-check-label" for="exampleRadios1">
+              <h5>0,71</h5>
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="0">
+             <label value="0" class="form-check-label" for="exampleRadios2">
+              <h5>0,50</h5>
+             </label>
+           </div>
+           <div class="form-check">
+               <input class="form-check-input" type="radio" name="q10" id="exampleRadios2" value="1">
+               <label value="1" class="form-check-label" for="exampleRadios2">
+              <h5>0,25</h5>
+               </label>
+             </div>
+         </blockquote>
+       </div>
+     </div>
+     <div class="" style="display: {Verificacao::$bVisibilidade}">
+     <button class="btn btn-outline-info" type="submit" name="button" style="align-self: center; margin-top:0.7%;"><span class="icon-check"></span> ENVIAR</button>
+     </div>
+   </div>
+
+   </form>
+
+              <!-- Social -->
+              <div class="social_container">
+                <ul class="d-flex flex-row align-items-start justify-content-start">
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+
+
+  <div align='center'>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+
+  </div>
+
+
+  <script src="{$GET_TEMA}/js/jquery-3.2.1.min.js"></script>
+  <script src="{$GET_TEMA}/styles/bootstrap-4.1.2/popper.js"></script>
+  <script src="{$GET_TEMA}/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/TweenMax.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/TimelineMax.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/scrollmagic/ScrollMagic.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/animation.gsap.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/greensock/ScrollToPlugin.min.js"></script>
+  <script src="{$GET_TEMA}/plugins/progressbar/progressbar.js"></script>
+  <script src="{$GET_TEMA}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+  <script src="{$GET_TEMA}/plugins/easing/easing.js"></script>
+  <script src="{$GET_TEMA}/plugins/parallax-js-master/parallax.min.js"></script>
+  <script src="{$GET_TEMA}/js/custom.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+  </html>
