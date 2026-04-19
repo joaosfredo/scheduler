@@ -1,38 +1,39 @@
 <?php
 
-  $smarty = new Template();
-  $agenda = new Agenda();
-  $info1 = new Agenda();
-  $info2 = new Agenda();
-  $semana = new Agenda();
-  $meses = new Agenda();
-  $info = new Pessoa();
-  $agenda-> get_Agenda();
-  $info->get_Info();
-  $info1->get_Inserir();
-  $info2->get_Meses();
-  $semana->get_Semanas();
-  $meses->get_Mes();
+$smarty = new Template();
+$agenda = new Agenda();
+$info1 = new Agenda();
+$info2 = new Agenda();
+$semana = new Agenda();
+$meses = new Agenda();
+$info = new Pessoa();
 
-    // Configuração do tema do site
-    $smarty->assign('GET_TEMA', Rotas::get_SiteTema());
+$agenda->get_Agenda();
+$info->get_Info();
+$info1->get_Inserir();
+$info2->get_Meses();
+$semana->get_Semanas();
+$meses->get_Mes();
 
-    // Configuração das rotas de Página
-    $smarty->assign('GET_HOME', Rotas::get_SiteHome());
-    $smarty->assign('GET_SOBRE', Rotas::get_SiteSobre());
-    $smarty->assign('GET_GALERIA', Rotas::get_SiteGaleria());
-    $smarty->assign('GET_CONTATO', Rotas::get_SiteContato());
-    $smarty->assign('GET_LOGOUT', Pessoa::get_Logout());
-    $smarty->assign('GET_VERIFICACAO', Pessoa::Login_P());
-    $smarty->assign('SCHEDULER', Agenda::get_Scheduler());
+// Configuração do tema do site
+$smarty->assign('GET_TEMA', Rotas::get_SiteTema());
 
-    // informações do banco de dados na página
-    $smarty->assign('PES', $info->get_Itens());
-    $smarty->assign('INF', $info1->get_Itens());
-    $smarty->assign('MES', $info2->get_Itens());
-    $smarty->assign('AGE', $agenda->get_Itens());
-    $smarty->assign('SEM', $semana->get_Itens());
-    $smarty->assign('MON', $meses->get_Itens());
+// Configuração das rotas de Página
+$smarty->assign('GET_HOME', Rotas::get_SiteHome());
+$smarty->assign('GET_SOBRE', Rotas::get_SiteSobre());
+$smarty->assign('GET_GALERIA', Rotas::get_SiteGaleria());
+$smarty->assign('GET_CONTATO', Rotas::get_SiteContato());
+$smarty->assign('GET_LOGOUT', $info->get_Logout());
+$smarty->assign('GET_VERIFICACAO', $info->Login_P());
+$smarty->assign('SCHEDULER', $agenda->get_Scheduler());
 
-      $smarty->display('professor.html');
- ?>
+// informações do banco de dados na página
+$smarty->assign('PES', $info->get_Itens());
+$smarty->assign('INF', $info1->get_Itens());
+$smarty->assign('MES', $info2->get_Itens());
+$smarty->assign('AGE', $agenda->get_Itens());
+$smarty->assign('SEM', $semana->get_Itens());
+$smarty->assign('MON', $meses->get_Itens());
+
+$smarty->display('professor.html');
+?>

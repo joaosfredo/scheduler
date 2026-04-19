@@ -1,6 +1,7 @@
 <?php
 
     $smarty = new Template();
+    $pessoa = new Pessoa();
 
     // Configuração do tema do site
     $smarty->assign('GET_TEMA', Rotas::get_SiteTema());
@@ -12,7 +13,7 @@
     $smarty->assign('GET_CONTATO', Rotas::get_SiteContato());
     $smarty->assign('GET_ALUNO', Rotas::get_SiteAluno());
     $smarty->assign('GET_PROFESSOR', Rotas::get_SiteProfessor());
-    $smarty->assign('GET_LOGIN', Pessoa::get_Login());
+    $smarty->assign('GET_LOGIN', $pessoa->get_Login());
 
-      $smarty->display('galeria.html');
- ?>
+    $smarty->display('galeria.html');
+?>

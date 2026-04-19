@@ -5,6 +5,7 @@
     SESSION_START();
 
     $smarty = new Template();
+    $pessoa = new Pessoa();
 
     // Configuração do tema do site
     $smarty->assign('GET_TEMA', Rotas::get_SiteTema());
@@ -18,7 +19,7 @@
     $smarty->assign('GET_ESTORIA', Rotas::get_SiteHistoria());
     $smarty->assign('GET_PROFESSOR', Rotas::get_SiteProfessor());
     $smarty->assign('GET_GERENTE', Rotas::get_SiteGerente());
-    $smarty->assign('GET_LOGIN', Pessoa::get_Login());
+    $smarty->assign('GET_LOGIN', $pessoa->get_Login());
 
     if (isset($_GET['pag'])) {
       Rotas::get_Pagina();

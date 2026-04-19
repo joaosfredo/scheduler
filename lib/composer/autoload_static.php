@@ -8,6 +8,7 @@ class ComposerStaticInite85bb3226e18b615ac880e367316a410
 {
     public static $classMap = array (
         'Agenda' => __DIR__ . '/../..' . '/model/Agenda.class.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Config' => __DIR__ . '/../..' . '/model/Config.class.php',
         'Connect' => __DIR__ . '/../..' . '/model/Connect.class.php',
         'Contato' => __DIR__ . '/../..' . '/model/Contato.class.php',

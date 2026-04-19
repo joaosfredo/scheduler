@@ -2,7 +2,7 @@
 
     $smarty = new Template();
     $agenda = new Agenda();
-    $agenda-> get_Agenda();
+    $agenda->get_Agenda();
     $info = new Pessoa();
     $info->get_Info();
 
@@ -15,7 +15,7 @@
     $smarty->assign('GET_GALERIA', Rotas::get_SiteGaleria());
     $smarty->assign('GET_CONTATO', Rotas::get_SiteContato());
     $smarty->assign('GET_CADASTRO', Rotas::get_Cadastro());
-    $smarty->assign('GET_LOGOUT', Pessoa::get_Logout());
+    $smarty->assign('GET_LOGOUT', $info->get_Logout());
     $smarty->assign('GET_ALUNO', Rotas::get_SiteAluno());
     $smarty->assign('SOMA', Verificacao::soma());
     $smarty->assign('REFAZER', Verificacao::refazer());
@@ -24,5 +24,5 @@
     $smarty->assign('PES', $info->get_Itens());
     $smarty->assign('AGE', $agenda->get_Itens());
 
-      $smarty->display('historia.html');
- ?>
+    $smarty->display('historia.html');
+?>
